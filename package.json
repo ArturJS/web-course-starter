@@ -7,7 +7,6 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "clean": "rm dist/bundle.js",
     "dev": "webpack serve --static --open --mode development",
     "build": "webpack --mode production"
   },
@@ -15,6 +14,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.4.1",
@@ -25,5 +26,8 @@
     "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.7.2"
+  },
+  "lint-staged": {
+    "*.{ts,js,css,md}": "prettier --write"
   }
 }
