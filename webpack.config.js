@@ -10,7 +10,7 @@ const config = {
         filename: '[name].[contenthash].js'
     },
     target: 'web',
-    devtool: false,
+    devtool: 'cheap-source-map',
     module: {
         rules: [
             {
