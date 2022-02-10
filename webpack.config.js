@@ -21,6 +21,13 @@ const config = {
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name].[contenthash:6][ext][query]'
+                }
             }
         ]
     },

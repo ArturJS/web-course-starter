@@ -10,6 +10,16 @@ module.exports = {
     ],
     rules: {
         'import/prefer-default-export': 'off',
-        'import/extensions': 'off'
+        'import/extensions': 'off',
+        'import/no-unresolved': ['off', { ignore: ['.png$', '.svg$'] }]
+    },
+    globals: {
+        Promise: true,
+        document: true,
+        window: true
+    },
+    env: {
+        browser: true,
+        node: true
     }
 };
